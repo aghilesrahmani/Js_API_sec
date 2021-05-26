@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="carousel">
+
+        <div class="carousel_item carousel_item--visible">
+            <img src="./renault-electric-suv.jpeg" />
+        </div>
+
+        <div class="carousel_item carousel_item--hidden">
+            <img src="./S8-renault.jpeg" />
+        </div>
+
+        <div class="carousel_item carousel_item--hidden">
+            <img src="./new-zoe.jpeg" />
+        </div>
+
+        <div class="carousel_actions">
+            <button id="carousel_button--prev" aria-label="previous slide"> < </button>
+            <button id="carousel_button--next" aria-label="NNext slide"> > </button>
+        </div>
+    </div>
+
+
+    <div id="affiche_data" class="clickEvent">
+        <button id="btn">Clique pour afficher</button>
+        <br>
+        <img src="./pngCar.png" id="img" alt="">
+
+    </div>
+
+
+
+
+    <div id="app_api">
+        <button id="btn_api" onclick="getAPI()">appel de API</button>
+        <br>
+
+        <p id="userID">Donnees API</p>
+        <input type="text" minlength="10" id="userID" alt=""><br></input>
+        <br>
+    </div>
+
+    <div class="mouseEvent">
+        <div>Horizonntale : <span class="horizontale">0</span></div>
+        <div>Verticale : <span class="verticale">0</span></div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

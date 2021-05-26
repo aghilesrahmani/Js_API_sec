@@ -1,0 +1,113 @@
+* {
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+.carousel {
+    overflow: hidden;
+    max-width: 1000px;
+    position: relative;
+}
+
+.carousel .carousel_item--hidden {
+    display: none;
+}
+
+.carousel .carousel_item img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.carousel .carousel_item--visible {
+    display: block;
+    animation: fadeVisibility 0.9s;
+}
+
+.carousel .carousel_actions {
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel_actions button {
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carousel_actions button #carousel_button--prev {
+    margin-left: 20px;
+}
+
+.carousel .carousel_actions button #carousel_button--next {
+    margin-right: 20px;
+}
+
+body {
+    min-height: 100vh;
+    transition: .5s;
+}
+
+img {
+    margin: 0 auto;
+    height: 200px;
+    visibility: visible;
+}
+
+.show {
+    visibility: hidden;
+}
+
+.mouseEvent {
+    border: 6px solid salmon;
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+
+.appel_API {
+    background-color: silver;
+    border: 6px solid slateblue;
+    visibility: visible;
+    font-display: inherit;
+}
+
+p {
+    visibility: hidden;
+}
+
+input {
+    visibility: hidden;
+}
+
+.userID {
+    color: salmon;
+    display: grid;
+}
+
+.infor {
+    color: lightcoral;
+    visibility: visible;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
