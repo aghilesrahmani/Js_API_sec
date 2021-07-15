@@ -85,9 +85,7 @@ p {
     visibility: hidden;
 }
 
-input {
-    visibility: hidden;
-}
+input {}
 
 .userID {
     color: salmon;
@@ -110,4 +108,8 @@ input {
         opacity: 1;
         transform: opacity linear;
     }
+}
+
+.key {
+    margin-top: 50px;
 }

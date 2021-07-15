@@ -79,6 +79,7 @@ mouseEvent.addEventListener('mousemove', (e) => {
     horizontale.innerHTML = e.x;
     verticale.innerHTML = e.y;
     mouseEvent.style.left = e.x / window.innerWidth * 100 + "%";
+    mouseEvent.style.right = e.y / window.innerWidth * 100 + "%";
 })
 
 var callBackGetSuccess = function(data) {
@@ -109,3 +110,25 @@ function getAPI() {
             alert("termine")
         })*/
 }
+
+fetch("https://pokeapi.co/api/v2/gender/3/")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+            /* Expected output:
+            {
+                "id": 1,
+                "type": "dev",
+                "joke": "Un développeur ne descend pas du métro.",
+                "answer": "Il libère la RAM..."
+            }
+            */
+    })
+
+const input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("mybtn").click();
+    }
+})
